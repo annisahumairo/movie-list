@@ -1,0 +1,45 @@
+<h1 style="text-align: center;margin-top: 20px;">Movie Detail</h1>
+<div class="col-md-6 container">
+    <div class="row">
+        <div class="col-md-5">
+            <img src="{{this.poster}}" alt="">
+        </div>
+        <div class="col-md-5" style="margin-top: 20px;">
+            <div >
+                <label class="labelClass">Judul </label><br>
+                <span style="margin-left: 20px;">{{this.title}}</span>
+            </div>
+            <div>
+                <label class="labelClass">Tahun </label><br>
+                <span style="margin-left: 20px;">{{this.year}}</span>
+            </div>
+            <div>
+                <label class="labelClass">Tipe</label><br>
+                <span style="margin-left: 20px;">{{this.type}}</span>
+            </div>
+            <button class="btnDasboard" (click)="backDashboard()">Dasboard</button>
+        </div>
+
+    </div>
+    <!-- <table>
+        <tr>
+            <td>
+                <img src="{{this.poster}}" alt="">
+            </td>
+            <td>
+                <div>
+                    <label class="labelClass">Judul </label><br>
+                    <span>{{this.title}}</span>
+                </div>
+                <div>
+                    <label class="labelClass">Tahun </label><br>
+                    <span>{{this.year}}</span>
+                </div>
+                <div>
+                    <label class="labelClass">Tipe</label><br>
+                    <span>{{this.type}}</span>
+                </div>
+            </td>
+        </tr>
+    </table> -->
+</div>
