@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <!-- <div class="jw-modal-background"> -->
+            <h1 style="text-align: center;margin-top: 20px;">Movie List</h1> 
+            
+            <div class="row">
+                <div>
+                    <input class="searcInput" type="text" name="search" placeholder="Search" (keyup)="onSearch($event)">
+                </div>
+                <div class="column box img__wrap" *ngFor="let ls of latestMovie; let i = index">
+                    <!-- <div class="img__wrap"> -->
+                        <img src="{{ls.Poster}}" style="width: 100%" (click)="openModal(ls.Poster, ls.Title,ls.Year,ls.Type)">
+                        <p class="img__description" (click)="openModal(ls.Poster, ls.Title,ls.Year,ls.Type)">
+                            <span style="font-size: large;
+                            font-family: sans-serif;
+                            font-weight: bold;">Judul : {{ls.Title}}</span><br> 
+                            Tahun : {{ls.Year}}<br> 
+                            Tipe : {{ls.Type}}</p>
+                </div>
+            </div>
+        <!-- </div> -->
+        <div class="jw.modal-wrapper" style="display: {{displayM}};" id="myModal">
+            <div class="jw-modal">
+                <div class="jw-modal-body">
+                    <div><button class="btnClose" (click)="closeModal()">X</button></div>
+                    <!-- <img class="imgModal" src="{{pickPoster}}" routerLink="/detail">
+                    <button class="btnDetail" routerLink="/detail">Detail</button> -->
+                    <img class="imgModal" src="{{pickPoster}}" (click)="detailMovie()">
+                    <button class="btnDetail" (click)="detailMovie()">Detail</button>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
+    
+    
